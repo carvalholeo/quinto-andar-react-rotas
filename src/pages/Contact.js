@@ -1,9 +1,11 @@
+import {useParams} from 'react-router-dom';
 
 function Contact() {
+  const {nome, sobrenome} = useParams();
   return (
     <>
       <div>
-        <h1>Entre em contato</h1>
+        <h1>Entre em contato{nome && `, ${nome}`} {sobrenome && ` ${sobrenome}`}</h1>
         <p>Ficou interessado em nosso produtos e serviços? Entre já em contato! Com certeza, temos a melhor solução para você!</p>
         <form>
           <div className="mb-3">
